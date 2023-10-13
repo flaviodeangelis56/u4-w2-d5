@@ -165,6 +165,8 @@ public class Application {
                     }
                 } catch (ChooseInputException e) {
                     System.out.println("ERRORE : " + e.getMessage());
+                } catch (Exception e) {
+                    System.out.println("ERRORE : " + e.getMessage());
                 }
             } while (inputChoose != 0);
 
