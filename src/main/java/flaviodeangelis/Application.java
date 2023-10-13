@@ -14,7 +14,8 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         List<element> archivio = new ArrayList<>();
-
+        Magazine test1 = new Magazine("fufu", 24342, 42234, Periodicità.SETTIMANALE);
+        archivio.add(test1);
 // --------------------------------------- ADD --------------------------------------
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci book per aggiunere un libro, magazine per aggiungere una rivista");
@@ -54,8 +55,13 @@ public class Application {
         } else {
             System.out.println("Tipo di elemento non disponibile");
         }
-// ------------------------------------------- REMOVE ----------------------------------------------
 
+        System.out.println(archivio);
+// ------------------------------------------- REMOVE ----------------------------------------------
+        System.out.println("Inserisci un codice ISBN per rimuovere quell'elemento dall'archivio");
+        long inputISBN = Integer.parseInt(input.nextLine());
+        archivio.removeIf(element -> element.getISBN() == inputISBN);
+        
         System.out.println(archivio);
     }
 

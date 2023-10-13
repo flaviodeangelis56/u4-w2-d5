@@ -3,12 +3,13 @@ package flaviodeangelis.entities;
 import java.util.Random;
 
 public class Books extends element {
-    long ISBN;
-    String title;
-    int yearOfPublication;
-    int numberOfPage;
-    String author;
-    String type;
+
+    private long ISBN;
+    private String title;
+    private int yearOfPublication;
+    private int numberOfPage;
+    private String author;
+    private String type;
 
     public Books(String title, int yearOfPublication, int numberOfPage, String author, String type) {
         Random rndm = new Random();
@@ -31,4 +32,29 @@ public class Books extends element {
                 ", type='" + type + '\'' +
                 '}';
     }
+
+    public long getISBN() {
+        return ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYearOfPublication() {
+        return yearOfPublication;
+    }
+
+    public int getNumberOfPage() {
+        return numberOfPage;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getType() {
+        return type;
+    }
 }
+

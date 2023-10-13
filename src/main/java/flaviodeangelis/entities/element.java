@@ -1,8 +1,24 @@
 package flaviodeangelis.entities;
 
-public abstract class element {
-    long ISBN;
-    String title;
-    int yearOfPublication;
-    int numberOfPage;
+public class element {
+    private long ISBN;
+    private String title;
+    private int yearOfPublication;
+    private int numberOfPage;
+
+    public long getISBN() {
+        return ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYearOfPublication() {
+        return yearOfPublication;
+    }
+
+    public int getNumberOfPage() {
+        return numberOfPage;
+    }
 }

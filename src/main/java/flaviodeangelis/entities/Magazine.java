@@ -3,11 +3,11 @@ package flaviodeangelis.entities;
 import java.util.Random;
 
 public class Magazine extends element {
-    long ISBN;
-    String title;
-    int yearOfPublication;
-    int numberOfPage;
-    Periodicità periodicità;
+    private long ISBN;
+    private String title;
+    private int yearOfPublication;
+    private int numberOfPage;
+    private Periodicità periodicità;
 
     public Magazine(String title, int yearOfPublication, int numberOfPage, Periodicità periodicità) {
         Random rndm = new Random();
@@ -27,5 +27,25 @@ public class Magazine extends element {
                 ", numberOfPage=" + numberOfPage +
                 ", periodicità=" + periodicità +
                 '}';
+    }
+
+    public long getISBN() {
+        return ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYearOfPublication() {
+        return yearOfPublication;
+    }
+
+    public int getNumberOfPage() {
+        return numberOfPage;
+    }
+
+    public Periodicità getPeriodicità() {
+        return periodicità;
     }
 }
