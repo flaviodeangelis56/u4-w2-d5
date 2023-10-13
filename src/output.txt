@@ -1,0 +1,1 @@
+[Magazine : {ISBN=61173700, title='fufu', yearOfPublication=24342, numberOfPage=42234, periodicità=SETTIMANALE}, Books : {ISBN=60944294, title='dwadawd', yearOfPublication=34, numberOfPage=45, author='wfefs', type='sfefe'}]
