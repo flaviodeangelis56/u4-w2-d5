@@ -20,7 +20,7 @@ public class Application {
         System.out.println("Hello World!");
         File file = new File("src/output.txt");
         List<element> archivio = new ArrayList<>();
-        Magazine test1 = new Magazine("fufu", 24342, 42234, Periodicità.SETTIMANALE);
+        Magazine test1 = new Magazine("Focus", 2015, 129, Periodicità.SETTIMANALE);
         archivio.add(test1);
         try {
             Scanner input = new Scanner(System.in);

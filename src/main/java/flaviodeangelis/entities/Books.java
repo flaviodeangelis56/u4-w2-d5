@@ -37,24 +37,15 @@ public class Books extends element {
         return ISBN;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
     public int getYearOfPublication() {
         return yearOfPublication;
     }
 
-    public int getNumberOfPage() {
-        return numberOfPage;
-    }
 
     public String getAuthor() {
         return author;
     }
 
-    public String getType() {
-        return type;
-    }
 }
 
