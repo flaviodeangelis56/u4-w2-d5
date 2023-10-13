@@ -61,8 +61,27 @@ public class Application {
         System.out.println("Inserisci un codice ISBN per rimuovere quell'elemento dall'archivio");
         long inputISBN = Integer.parseInt(input.nextLine());
         archivio.removeIf(element -> element.getISBN() == inputISBN);
-        
-        System.out.println(archivio);
+
+
+        // ------------------------------------------- RICERCA ISBN ----------------------------------------------
+        System.out.println("Inserisci un codice ISBN per cercare un libro");
+        long inputISBNCerca = Integer.parseInt(input.nextLine());
+        archivio.stream().filter(element -> element.getISBN() == inputISBNCerca).forEach(element -> System.out.println(element));
+        // ------------------------------------------- RICERCA ANNO ----------------------------------------------
+        System.out.println("Inserisci un anno per cercare un libro");
+        int inputAnnoCerca = Integer.parseInt(input.nextLine());
+        archivio.stream().filter(element -> element.getYearOfPublication() == inputAnnoCerca).forEach(element -> System.out.println(element));
+        // ------------------------------------------- RICERCA AUTORE ----------------------------------------------
+        System.out.println("Inserisci un autore per cercare un libro");
+        String inputAutoreCerca = input.nextLine();
+        List<Books> booksList = new ArrayList<>();
+        for (int i = 0; i < archivio.size(); i++) {
+            if (archivio.get(i) instanceof Books) {
+                booksList.add((Books) archivio.get(i));
+            }
+        }
+        booksList.stream().filter(element -> element.getAuthor().equals(inputAutoreCerca)).forEach(book -> System.out.println(book));
+
     }
 
 
